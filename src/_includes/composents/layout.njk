@@ -1,0 +1,8 @@
+---
+layout: composents/document.njk
+---
+<div class="page-content">
+{% include 'composents/top-bar.njk' %}
+  {{ content | safe }}
+  {% include './page-footer.njk' %}
+</div>

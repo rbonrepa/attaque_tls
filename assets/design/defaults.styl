@@ -1,0 +1,64 @@
+*
+*::before
+*::after
+  box-sizing inherit
+
+html
+  box-sizing border-box
+  font-size 50%
+  font-size clamp(50%, 0.5vw, 100%)
+  background-color $black
+  scroll-behavior smooth
+
+body
+  margin 0
+  overflow-x hidden
+  color $black
+  font-size $font-normal
+  font-family $font-family-body
+  line-height 1.5
+  background-color $black
+  --parallax 0
+  --offset 0
+  --x 0
+  --y 0
+
+img
+svg
+  max-width 100%
+  height auto
+  vertical-align bottom
+
+h1
+  margin $gap-large 0
+  font-weight 300
+  font-size $font-title
+  font-size s('min(10vw, %s)', $font-title)
+  font-family $font-family-headlines
+  line-height 1.5
+
+h2
+  font-size $font-larger
+
+h3
+  font-size $font-large
+
+h2
+h3
+h4
+h5
+h6
+  font-weight 200
+  font-family $font-family-headlines
+  line-height 1.2
+
+h2
+h3
+h4
+h5
+h6
+p
+  margin $gap-normal 0
+
+a
+  color $blue

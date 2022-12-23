@@ -1,0 +1,42 @@
+/* stylelint-disable rscss/no-descendant-combinator */
+/* stylelint-disable rscss/class-format */
+.page-footer
+  margin-top $gap-huge
+  overflow hidden
+  color $black
+  background-color $red
+  box-shadow $shadow-light
+
+  .title
+    margin $gap-normal
+    padding 0 0 $gap-small
+    border-width 0 0 $border-small 0
+    border-image linear-gradient(to right, $translucent-white, $translucent-white 10%, transparent 10.01%) 100% 1
+
+  .text
+  .center
+    margin $gap-normal 0
+    padding 0 $gap-normal
+
+  .text
+    text-align justify
+
+    > a
+      text-decoration:none; 
+      color: #000000;
+
+  .logo-list img
+    filter contrast(0) brightness(2)
+
+  .center
+    text-align center
+
+  @media (min-width $media-large)
+    > .columns
+      display flex
+      max-width $width-title
+      margin-right auto
+      margin-left auto
+
+      > .column
+        flex 1

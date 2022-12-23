@@ -1,0 +1,40 @@
+.main-content
+  > h2
+    @extend .content-title
+
+  > p
+  > blockquote
+    max-width $width-text
+    margin-right auto
+    margin-left auto
+    padding 0 $gap-normal
+    text-align justify
+
+    > a
+      beautiful-link()
+
+  > ul
+    display: block;
+    max-width $width-text
+    margin-right auto
+    margin-left auto
+    padding 0 $gap-larger 0 $gap-larger
+    text-align justify
+
+    // stylelint-disable-next-line rscss/no-descendant-combinator
+    a
+      beautiful-link()
+
+  > .picture
+    max-width $width-picture
+
+    margin $gap-normal auto
+    padding: 10em;
+    align-items center
+    justify-content space-evenly;
+
+    > img
+      width 100%
+
+  > .footer
+    margin-top $gap-larger

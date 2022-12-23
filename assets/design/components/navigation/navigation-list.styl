@@ -1,0 +1,30 @@
+.navigation-list
+  position absolute
+  left 0
+  z-index 20
+  margin-top $gap-normal
+  padding 0
+  white-space normal
+  list-style-type none
+
+  > .item
+    position relative
+    padding $gap-small $gap-normal
+    color $black
+    background-color $black
+    border-bottom $border-small solid $black
+
+    > a
+      color black
+      text-decoration black
+
+      &::before
+        position absolute
+        top 0
+        right 0
+        bottom 0
+        left 0
+        content ''
+
+  &:focus-within
+    display block

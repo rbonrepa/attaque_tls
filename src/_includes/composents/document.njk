@@ -1,0 +1,17 @@
+{% import "./resources.njk" as resources -%}
+
+<!DOCTYPE html>
+<html lang="fr" class="_nojs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="{{ title }}">
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}" />
+    {{ resources.stylesheets() }}
+  </head>
+  <body>
+    {{ content | safe }}
+    {{ resources.scripts() }}
+  </body>
+</html>

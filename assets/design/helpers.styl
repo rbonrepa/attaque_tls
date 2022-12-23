@@ -1,0 +1,77 @@
+._center
+  text-align center
+
+._icon
+  width 2rem
+  height 2rem
+  margin-top (1rem / 2)
+  margin-bottom (1rem / 2)
+  fill currentColor
+
+  &.-big
+    height: 6rem;
+    width: 6rem;
+    padding: 5px;
+    margin-top: 2em;
+    margin-bottom: 0;
+
+._parallax
+  transition transform $animation-fast
+  --offset 0
+
+  span&
+    display inline-block
+
+@media (prefers-reduced-motion no-preference)
+  ._parallax-5
+    transform translateY(calc(-5vh * (var(--parallax) - var(--offset))))
+
+  ._parallax-10
+    transform translateY(calc(-10vh * (var(--parallax) - var(--offset))))
+
+  ._parallax-15
+    transform translateY(calc(-15vh * (var(--parallax) - var(--offset))))
+
+a._beautiful-link
+  beautiful-link()
+
+._video-embed
+  position relative
+  padding-bottom (9 / 16) * 100%
+
+  > iframe
+  > video
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+
+._row
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 10%;
+
+._row_center
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 10%;
+
+._show-on-target
+  display none
+
+  &:target
+    display block
+
+._inherit
+  color black
+  font-weight inherit
+  text-decoration inherit

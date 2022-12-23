@@ -1,0 +1,29 @@
+.logo-list
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  align-items center
+  justify-content center
+  max-width $width-large
+  margin-right auto
+  margin-left auto
+  padding $gap-normal
+
+  > a
+    display inline-block
+    width 20rem
+    height 20rem
+    margin $gap-normal
+    transition $animation-fast transform
+
+    &:hover
+    &:focus
+      transform scale((22 / 20))
+
+    > img
+      width 150px;
+      height 150px;
+      object-fit contain
+
+  &.-small > a
+    height 10rem

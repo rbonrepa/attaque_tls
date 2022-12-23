@@ -1,0 +1,14 @@
+.page-content
+  z-index 1
+  color $black
+  background-color $white
+  transform-origin 50% 0%
+  backface-visibility hidden
+  transition transform $animation-fast
+
+/* stylelint-disable-next-line */
+._nojs .page-content
+._menu-open .page-content
+._menu-closing .page-content
+  max-height 100vh
+  overflow auto

@@ -1,0 +1,23 @@
+beautiful-link($color = $blue, $bg = $white, $line = (1rem / 8))
+  display inline
+  padding-bottom 2 * $line
+  color $color
+  text-decoration none
+  background-image linear-gradient($color, $color), linear-gradient($color, $color)
+  background-repeat no-repeat, no-repeat
+  background-position bottom left, bottom right
+  background-size 100% $line, 0% (2 * $line)
+  border-radius $radius-small
+  box-decoration-break clone
+  transition $animation-fast color, $animation-fast background-size
+
+  &:hover
+    background-position bottom left, bottom left
+    background-size 100% $line, 100% (2 * $line)
+
+  &:focus
+  &:active
+    color $bg
+    background-position bottom left, bottom left
+    background-size 100% 100%, 0% (2 * $line)
+    outline 0

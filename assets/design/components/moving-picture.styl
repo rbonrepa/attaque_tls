@@ -1,0 +1,6 @@
+.moving-picture
+  overflow hidden
+
+  > img
+    transform s('translate(calc(2% * var(--x)), calc(2% * var(--y))) scale(1.04)')
+    transition transform $animation-slow ease-out

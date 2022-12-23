@@ -1,0 +1,36 @@
+.quoted-text
+  margin $gap-huge 0
+  padding 0 $gap-large
+  line-height 2
+
+  > .quote
+    position relative
+    z-index 1
+    display block
+    font-style italic
+    text-align justify
+    text-indent $gap-normal
+
+    &::before
+    &::after
+      position absolute
+      z-index -1
+      color alpha($gold, 25%)
+      font-weight normal
+      font-size 5 * $font-large
+      font-style normal
+      line-height 1
+      text-indent 0
+
+    &::before
+      top - 3 * $font-large
+      left - $gap-normal
+
+    &::after
+      right - $gap-normal
+      bottom - $font-normal
+
+  > .source
+    margin-top $gap-normal
+    font-weight bold
+    text-align right

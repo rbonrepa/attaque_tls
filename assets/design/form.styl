@@ -1,0 +1,21 @@
+button[type=submit]
+  @extend .button-link
+  border 0
+  appearance none
+
+input[type=text]
+input[type=email]
+textarea
+  display block
+  max-width 100%
+  border $border-small solid $dark-grey
+  border-radius $radius-normal
+
+  &:focus
+    border-color $black
+    outline 0
+    box-shadow $shadow-light
+
+/* stylelint-disable no-descending-specificity */
+textarea
+  width 100%

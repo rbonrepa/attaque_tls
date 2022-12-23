@@ -1,0 +1,55 @@
+
+.text-and-picture
+  display flex
+  flex-direction column-reverse
+  align-items center
+  margin $gap-larger 0
+
+  > .text
+    max-width $width-text
+    padding 0 $gap-large
+    text-align justify
+
+  > .picture
+    position relative
+    display flex
+    align-self stretch
+    justify-content center
+    padding 0 $gap-small
+
+    > img
+      z-index 1
+      width auto
+      max-width 50rem
+      height 50rem
+      box-shadow $shadow-light
+
+    > .background
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      background $blue
+
+  @media (min-width $media-larger)
+    flex-direction row
+    justify-content flex-end
+
+    &.-reverse
+      flex-direction row-reverse
+
+    > .text > .title
+      text-align right
+
+    > .picture
+      align-self stretch
+      justify-content flex-start
+      width 50%
+      padding 0 $gap-large
+
+    &.-reverse > .text > .title
+      text-align left
+
+    &.-reverse > .picture
+      justify-content flex-end

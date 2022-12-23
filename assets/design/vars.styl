@@ -1,0 +1,53 @@
+// **** Colors ****
+$black = #222
+$white = #fff
+$light-grey = mix($white, $black, 85%)
+$dark-grey = mix($white, $black, 35%)
+$blue = #294389
+$gold = #FFF4B7
+$red = #FFF4B7
+$light-gold = #fddeab
+$dark-gold = #f89c18
+$translucent-white = alpha($white, 75%)
+// **** Margins and paddings ****
+$gap-small = 1rem
+$gap-normal = 2rem
+$gap-large = 3rem
+$gap-larger = 6rem
+$gap-huge = 12rem
+// **** Widths ****
+$width-card = 60rem
+$width-hero = 80rem
+$width-text = 80rem
+$width-picture = 110rem
+$width-title = 160rem
+$width-large = 2 * $width-card + 3 * $gap-normal // = 2 cards
+$width-huge = 3 * $width-card + 4 * $gap-normal // = 3 cards
+// **** Font families and sizes ****
+$font-normal = 2rem
+$font-large = 3rem
+$font-larger = 5rem
+$font-title = 7rem
+$font-family-body = -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif
+$font-family-headlines = 'Mukta', $font-family-body
+// **** Animation timings ****
+$animation-faster = 0.05s
+$animation-fast = 0.2s
+$animation-normal = 0.5s
+$animation-slow = 1s
+$animation-contemplative = 5s
+// **** Shadows ****
+$shadow-lighter = 0 0 (1rem / 4) alpha($black, 0.25)
+$shadow-light = 0 0 (1rem / 2) alpha($black, 0.25)
+$shadow-normal = 0 0 1rem $black
+// **** Radii ****
+$radius-small = 0.25rem
+$radius-normal = 0.5rem
+$radius-large = 1rem
+// **** Borders ****
+$border-small = 0.25rem
+$border-large = 0.5rem
+// **** Media queries ****
+$media-large = 40em + 2em
+$media-larger = unit(((2 * $width-card + 3 * $gap-normal) / 2), em)
+$media-very-large = unit(($width-huge / 2), em)

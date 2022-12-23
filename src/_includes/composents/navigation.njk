@@ -1,0 +1,16 @@
+  
+  {% set nav = collections.all | eleventyNavigation %}
+  <ul class="navigation-bar">
+    <li class="item">
+      <a href="/index.html">Accueil</a>
+    </li>
+    {% for topEntry in nav %}
+      <li class="item">
+        <a href="{{ topEntry.url | url }}">{{ topEntry.title }}</a>
+      </li>
+    {% endfor %}
+    <li class="item">
+      <a href="/contact/">Contact</a>
+    </li>
+  </ul>
+

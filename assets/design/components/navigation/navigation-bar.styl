@@ -1,0 +1,50 @@
+$bar-width = 1px
+$bar-width-focused = 4px
+$bar-color = $light-grey
+$bar-color-focused = $black
+
+.navigation-bar
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  align-content start
+  align-items center
+  justify-content: space-evenly;
+  padding: 5%;
+  color $black
+  list-style none
+
+  @supports (flex 1)
+    flex 1
+
+  > .item
+    position relative
+    display inline-block
+    margin $gap-small
+    padding $gap-normal
+    color inherit
+    white-space nowrap
+    text-decoration none
+    background-image linear-gradient($bar-color-focused, $bar-color-focused), linear-gradient($bar-color, $bar-color)
+    background-repeat no-repeat, no-repeat
+    background-position bottom right, bottom left
+    background-size 0% $bar-width-focused, 100% $bar-width
+    cursor pointer
+    transition background-size $animation-fast
+
+    &:hover
+    &:focus
+      background-position bottom left, bottom left
+      background-size 100% $bar-width-focused, 100% $bar-width
+
+    > a
+      color inherit
+      text-decoration inherit
+
+      &::before
+        position absolute
+        top 0
+        right 0
+        bottom 0
+        left 0
+        content ''

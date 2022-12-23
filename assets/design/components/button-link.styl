@@ -1,0 +1,30 @@
+.button-link
+  display inline-block
+  margin-top $gap-normal
+  padding $gap-small $gap-normal
+  color $black
+  font-weight red
+  white-space nowrap
+  text-decoration inherit
+  text-shadow none
+  background-image linear-gradient(100deg, $dark-gold 50%, $red 50.1%)
+  background-position right center
+  background-size 250% 100%
+  border-radius $radius-small
+  box-shadow $shadow-lighter
+  transition background-position $animation-normal
+
+  &.-larger
+    margin $gap-normal
+    padding $gap-normal $gap-larger
+
+  &.-quieter
+    background-image linear-gradient(100deg, $dark-gold 50%, $white 50.1%)
+
+  &:hover
+  &:focus
+    background-position left center
+
+  > .icon
+    height 2.5rem
+    margin-left $gap-small

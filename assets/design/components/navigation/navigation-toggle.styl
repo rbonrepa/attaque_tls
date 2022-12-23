@@ -1,0 +1,94 @@
+.navigation-toggle
+  > .toggle
+    position fixed
+    top 0
+    right 0
+    z-index 10
+    display flex
+    padding $gap-normal $gap-small
+    color $black
+    font-weight bold
+    transition color $animation-fast, background-color $animation-fast
+    user-select none
+
+    &::marker
+      display none
+
+    &::-webkit-details-marker
+      display none
+
+    &::before
+      position fixed
+      top 75vh
+      right 0
+      bottom 0
+      left 0
+      display none
+      content ''
+
+    > .label
+      padding $gap-small
+      line-height 1
+      background-color alpha($white, 25%)
+      border-radius $radius-small
+      -webkit-backdrop-filter blur(5px)
+      backdrop-filter blur(5px)
+      transition background-color $animation-fast
+
+    > .burger
+      box-sizing border-box // Should be inherited, but webkit bug
+      width 4rem
+      height 4rem
+      padding $gap-small
+      vertical-align bottom
+      background-color currentColor
+      border-radius $radius-small
+      transition fill $animation-fast
+      fill $white
+
+  ~ .navigation-menu
+    visibility hidden
+    transition visibility 0s
+    transition-delay $animation-fast
+
+/* The code bellow is a mess, mostly because mobile address bars are weird */
+/* stylelint-disable */
+._nojs .navigation-toggle > .toggle
+  right 16px // Prevent overlapping with the scrollbar
+
+._nojs .navigation-toggle[open]
+._menu-open .navigation-toggle
+  > .toggle
+    color $light-grey
+
+    > .label
+      background-color transparent
+
+    > .burger
+      fill $black
+
+    &::before
+      display block
+
+  ~ .navigation-menu
+    visibility visible
+    transition visibility 0s
+    transition-delay 0s
+
+  ~ .page-content
+    border-radius $radius-normal
+    // It looks better with scale((14 / 16)) but it's too hard for old devices
+    transform translateY(75vh) scale((14 / 16))
+
+body
+  overflow-y visible
+  transition overflow-y $animation-slow
+
+._nojs body
+body._menu-open
+body._menu-closing
+  overflow-y hidden
+
+._menu-open .navigation-toggle > .toggle
+._menu-closing .navigation-toggle > .toggle
+  right var(--offset)

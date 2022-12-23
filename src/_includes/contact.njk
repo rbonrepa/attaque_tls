@@ -1,0 +1,47 @@
+---
+layout: composents/layout.njk
+---
+<article>
+  <h1 class="main-title">
+    <span class="background">
+      <span class="text">{{ title }}</span></span></h1>
+  <div class="text-wrapper">
+    <p>{{ text.intro | imd | safe }}</p>
+  </div>
+  <div id="success" class="info-box _show-on-target">
+    {{ text.success | imd | safe }}
+  </div>
+  <div id="success" class="info-box _show-on-target">
+    {{ text.success | imd | safe }}
+  </div>
+  <div id="error_captcha" class="info-box _show-on-target">
+    {{ text.error_captcha | imd | safe }}
+  </div>
+  <form id="contact_form" action="/validate.php" method="POST" class="text-wrapper -justify">
+    <tr>
+      <td>
+        <label>Entrer le texte dans l'image</label>
+        <input name="captcha" type="text">
+        <img src="../images/captcha.php" style="vertical-align: middle;"/>
+      </td>
+    </tr>
+    <tr>
+    <p>
+      <label for="name">{{ text.name }}</label>
+      <input type="text" name="name" id="name" size="40" required>
+    </p>
+    <p>
+      <label for="email">{{ text.email }}</label>
+      <input type="email" name="email" id="email" size="40" required>
+    </p>
+    <p>
+      <label for="desc">{{ text.desc }}</label>
+      <textarea name="desc" id="desc" cols="50" rows="15" required></textarea>
+    </p>
+    <p class="_center">
+      <button type="submit" class="-larger">{{ text.submit }}</button>
+    </p>
+    <p>{{ text.tel | imd | safe }}</p>
+    <p>{{ text.terms | imd | safe }}</p>
+  </form>
+</article>
