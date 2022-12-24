@@ -1,7 +1,7 @@
 ---
 layout: /home.njk
-title: Titre
-description: Découvrez désc. 
+title: Nom de l'attaque
+description: Page d'accueil de la présentations. 
 localizeurl: true
 ---
 

@@ -6,7 +6,7 @@
   "keywords": [
     "tattoo",
     "tatouage",
-    "Toulouse"
+    "Pamiers"
   ],
   "author": "Bonrepaux rémi",
   "license": "MIT",
@@ -53,6 +53,8 @@
     "typescript": "^4.0.5"
   },
   "dependencies": {
+    "@quasibit/eleventy-plugin-sitemap": "^2.1.5",
+    "eleventy-plugin-googlestaticmaps": "^1.0.2",
     "nunjucks": "^3.2.3"
   }
 }
